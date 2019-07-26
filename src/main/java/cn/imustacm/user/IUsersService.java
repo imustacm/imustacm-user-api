@@ -29,7 +29,7 @@ public interface IUsersService {
     @PostMapping("/register")
     Boolean register();
 
-    @GetMapping("/getImage")
-    JSONObject getImage(HttpServletRequest request, HttpServletResponse response) throws IOException;
+    @GetMapping("/getVerification")
+    JSONObject getVerification();
 
 }
