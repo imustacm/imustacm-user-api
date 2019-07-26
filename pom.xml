@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.imustacm</groupId>
     <artifactId>imustacm-user-api</artifactId>
@@ -12,7 +11,6 @@
     <properties>
         <lombok.version>1.16.20</lombok.version>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -40,18 +38,9 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.19</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.19</version>
+            <version>9.0.20</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
-
 
 </project>
