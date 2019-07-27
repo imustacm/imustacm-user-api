@@ -1,6 +1,5 @@
 package cn.imustacm.user;
 
-
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,13 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/user")
 public interface IUsersService {
 
-
     /**
-     * 测试
+     * 用户注册
      * @return
      */
     @PostMapping("/register")
-    Boolean register();
+    JSONObject register();
 
     /**
      * 获取验证码
