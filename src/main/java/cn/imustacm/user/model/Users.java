@@ -1,8 +1,6 @@
 package cn.imustacm.user.model;
 
-
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -10,15 +8,14 @@ import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-
 /**
- * <p>
- * 
- * </p>
+ *
+ * 用户信息
  *
  * @author liandong
  * @since 2019-07-21
  */
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -33,48 +30,49 @@ public class Users extends Model<Users> {
 
     private String username;
 
-//    private String password;
-//
-//    @TableField("realName")
-//    private String realName;
-//
-//    private String signature;
+    private String password;
+
+    private String realname;
+
+    private String signature;
 
     private Integer gender;
 
-//    private String email;
-//
-//    private String school;
-//
-//    private String professional;
-//
-//    private String grade;
-//
-//    private String head;
-//
-//    private String qq;
-//
-//    @TableField("qqOpenId")
-//    private String qqOpenId;
-//
-//    @TableField("qqTime")
-//    private LocalDateTime qqTime;
-//
-//    private Integer submit;
-//
-//    private Integer solved;
-//
-//    @TableField("regTime")
-//    private LocalDateTime regTime;
-//
-//    private Integer volume;
-//
-//    private Integer language;
-//
-//    private Integer subject;
-//
-//    private String defunct;
+    private String email;
 
+    private String school;
+
+    private String major;
+
+    private String grade;
+
+    private String avatar;
+
+    private String blog;
+
+    private String github;
+
+    private String qq;
+
+    private String qqopenid;
+
+    private LocalDateTime qqtime;
+
+    private LocalDateTime regtime;
+
+    private String regip;
+
+    private Integer submit;
+
+    private Integer solved;
+
+    private Integer page;
+
+    private Integer language;
+
+    private Integer subject;
+
+    private boolean visible;
 
     @Override
     protected Serializable pkVal() {
