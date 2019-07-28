@@ -1,9 +1,13 @@
 package cn.imustacm.user.model;
 
+import cn.imustacm.common.utils.LocalDateTimeJsonDeserializer;
+import cn.imustacm.common.utils.LocalDateTimeJsonSerializable;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -56,8 +60,12 @@ public class Users extends Model<Users> {
 
     private String qqopenid;
 
+    @JsonSerialize(using = LocalDateTimeJsonSerializable.class)
+    @JsonDeserialize(using = LocalDateTimeJsonDeserializer.class)
     private LocalDateTime qqtime;
 
+    @JsonSerialize(using = LocalDateTimeJsonSerializable.class)
+    @JsonDeserialize(using = LocalDateTimeJsonDeserializer.class)
     private LocalDateTime regtime;
 
     private String regip;
