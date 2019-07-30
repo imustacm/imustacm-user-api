@@ -2,7 +2,6 @@ package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
 import cn.imustacm.user.dto.RegisterDTO;
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 /**
