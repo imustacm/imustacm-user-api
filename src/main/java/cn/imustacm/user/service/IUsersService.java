@@ -1,6 +1,7 @@
 package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
+import cn.imustacm.user.dto.LoginDTO;
 import cn.imustacm.user.dto.RegisterDTO;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,8 +35,16 @@ public interface IUsersService {
      *
      * @return
      */
-    @GetMapping("list")
+    @GetMapping("/list")
     Resp getUserList(@RequestParam("pageIndex") Integer pageIndex,
                      @RequestParam("pageSize") Integer pageSize);
+
+    /**
+     * 用户登录
+     *
+     * @return
+     */
+    @PostMapping("/login")
+    Resp login(@RequestBody LoginDTO loginDTO);
 
 }
