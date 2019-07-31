@@ -26,5 +26,5 @@ public class CaptchaDTO {
     /**
      * 验证码value
      */
-    private String value;
+    private byte[] value;
 }
