@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotNull;
 
 /**
- * 用户登录返回DTO
+ * 绑定EmailDTO
  *
  * @author wangjianli
  * Date: 2019/07/31
@@ -18,16 +18,11 @@ import javax.validation.constraints.NotNull;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginOutDTO {
+public class BindEmailDTO {
 
     /**
-     * token
+     * Email
      */
-    private String token;
-
-    /**
-     * 登录时间
-     */
-    private String logintime;
+    private String email;
 
 }

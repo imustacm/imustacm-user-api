@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CaptchaOutDTO {
+public class CaptchaDTO {
     /**
      * 验证码key
      */
