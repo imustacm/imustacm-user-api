@@ -1,9 +1,13 @@
 package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
+import cn.imustacm.user.dto.BindEmailDTO;
 import cn.imustacm.user.dto.LoginDTO;
 import cn.imustacm.user.dto.RegisterDTO;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 用户相关的接口定义
@@ -45,6 +49,14 @@ public interface IUsersService {
      * @return
      */
     @PostMapping("/login")
-    Resp login(@RequestBody LoginDTO loginDTO);
+    Resp login(HttpServletResponse response, @RequestBody LoginDTO loginDTO);
+
+    /**
+     * 用户登录
+     *
+     * @return
+     */
+    @PostMapping("/bindEmail")
+    Resp bindEmail(HttpServletRequest request, @RequestBody BindEmailDTO bindEmailDTO);
 
 }
