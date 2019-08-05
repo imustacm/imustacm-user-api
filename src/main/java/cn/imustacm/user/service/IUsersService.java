@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author liandong
  * @since 2019-07-21
  */
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 public interface IUsersService {
 
     /**
