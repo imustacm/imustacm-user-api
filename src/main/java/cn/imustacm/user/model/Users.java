@@ -82,6 +82,16 @@ public class Users extends Model<Users> {
 
     private boolean visible;
 
+    @JsonSerialize(using = LocalDateTimeJsonSerializable.class)
+    @JsonDeserialize(using = LocalDateTimeJsonDeserializer.class)
+    private LocalDateTime emaicltime;
+
+    @JsonSerialize(using = LocalDateTimeJsonSerializable.class)
+    @JsonDeserialize(using = LocalDateTimeJsonDeserializer.class)
+    private LocalDateTime emailutime;
+
+    private boolean emailflag;
+
     @Override
     protected Serializable pkVal() {
         return this.id;
