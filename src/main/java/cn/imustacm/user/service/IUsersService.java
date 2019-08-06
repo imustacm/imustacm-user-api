@@ -10,21 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 用户相关的接口定义
+ * 用户服务接口定义
  *
  * @author liandong
  * @since 2019-07-21
  */
 @RequestMapping("/api/users")
 public interface IUsersService {
-
-    /**
-     * 用户注册
-     *
-     * @return
-     */
-    @PostMapping("/register")
-    Resp register(@RequestBody RegisterDTO registerDTO);
 
     /**
      * 获取验证码
@@ -35,13 +27,12 @@ public interface IUsersService {
     Resp getVerification();
 
     /**
-     * 分页查询用户信息
+     * 用户注册
      *
      * @return
      */
-    @GetMapping("/list")
-    Resp getUserList(@RequestParam("pageIndex") Integer pageIndex,
-                     @RequestParam("pageSize") Integer pageSize);
+    @PostMapping("/register")
+    Resp register(@RequestBody RegisterDTO registerDTO);
 
     /**
      * 用户登录
@@ -52,11 +43,27 @@ public interface IUsersService {
     Resp login(HttpServletResponse response, @RequestBody LoginDTO loginDTO);
 
     /**
-     * 用户登录
+     * 邮箱绑定
      *
      * @return
      */
     @PostMapping("/bindEmail")
     Resp bindEmail(HttpServletRequest request, @RequestBody BindEmailDTO bindEmailDTO);
+
+    /**
+     * 邮箱验证
+     *
+     * @return
+     */
+    @GetMapping("/verifyEmail")
+    Resp verifyEmail(@RequestParam String id);
+
+    /**
+     * 分页查询用户信息
+     *
+     * @return
+     */
+    @GetMapping("/list")
+    Resp getUserList(@RequestParam("pageIndex") Integer pageIndex, @RequestParam("pageSize") Integer pageSize);
 
 }
