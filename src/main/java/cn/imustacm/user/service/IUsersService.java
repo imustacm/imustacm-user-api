@@ -27,6 +27,14 @@ public interface IUsersService {
     Resp getVerification();
 
     /**
+     * 获取七牛云Token
+     *
+     * @return
+     */
+    @GetMapping("/getQiniuToken")
+    Resp getQiniuToken();
+
+    /**
      * 用户注册
      *
      * @return
