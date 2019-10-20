@@ -1,6 +1,7 @@
 package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
+import cn.imustacm.user.model.Users;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,5 +22,15 @@ public interface IUsersService {
      */
     @GetMapping("/list")
     Resp getUserList(@RequestParam("pageIndex") Integer pageIndex, @RequestParam("pageSize") Integer pageSize);
+
+    /**
+     * 根据用户Id查询用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("get")
+    Users getUser(@RequestParam("id") Long userId);
+
 
 }
