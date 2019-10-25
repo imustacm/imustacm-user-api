@@ -1,6 +1,7 @@
 package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
+import cn.imustacm.user.model.Option;
 import cn.imustacm.user.model.Users;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,15 @@ public interface IUsersService {
      */
     @GetMapping("get")
     Users getUser(@RequestParam("id") Long userId);
+
+    /**
+     * 根据key查询配置信息
+     *
+     * @param key
+     * @return
+     */
+    @GetMapping("/getByKey")
+    Option getByKey(@RequestParam("key") String key);
 
 
 }
