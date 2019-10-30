@@ -1,8 +1,10 @@
 package cn.imustacm.user.service;
 
 import cn.imustacm.common.domain.Resp;
+import cn.imustacm.user.dto.RankListDTO;
 import cn.imustacm.user.model.Option;
 import cn.imustacm.user.model.Users;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +21,8 @@ public interface IUsersService {
     /**
      * 分页查询用户信息 (测试框架)
      *
+     *  @param pageIndex
+     *  @param pageSize
      * @return
      */
     @GetMapping("/list")
@@ -42,5 +46,14 @@ public interface IUsersService {
     @GetMapping("/getByKey")
     Option getByKey(@RequestParam("key") String key);
 
+    /**
+     * 分页获取解题排名
+     *
+     *  @param pageIndex
+     *  @param pageSize
+     * @return
+     */
+    @GetMapping("/getRankList")
+    Page<RankListDTO> getRankList(@RequestParam("pageIndex") Integer pageIndex, @RequestParam("pageSize") Integer pageSize);
 
 }
