@@ -17,19 +17,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class RankListDTO {
 
-    /**
-     * 用户名
-     */
     private String username;
 
-    /**
-     * 姓名
-     */
     private String realname;
 
-    /**
-     * 学校
-     */
     private String signature;
 
     private Integer gender;
@@ -45,4 +36,5 @@ public class RankListDTO {
     private Integer submit;
 
     private Integer solved;
+
 }
