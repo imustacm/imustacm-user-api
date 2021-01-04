@@ -29,10 +29,8 @@ public class SysPermissionInterface extends Model<SysPermissionInterface> {
 
     private Integer id;
 
-    @TableField("role_id")
-    private Integer roleId;
+    private Integer permissionId;
 
-    @TableField("interface_id")
     private Integer interfaceId;
 
     private Boolean visible;
