@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author liandong
@@ -29,11 +29,14 @@ public class SysPermissionInterface extends Model<SysPermissionInterface> {
 
     private Integer id;
 
-    @TableField("role_id")
-    private Integer roleId;
+    private Integer permissionId;
 
-    @TableField("interface_id")
     private Integer interfaceId;
+
+    /**
+     * 接口路径
+     */
+    private String interfaceUrl;
 
     private Boolean visible;
 

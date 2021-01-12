@@ -39,8 +39,8 @@ public class SysUserPermission extends Model<SysUserPermission> {
     @TableField("user_id")
     private Integer userId;
 
-    @TableField("role_id")
-    private Integer roleId;
+    @TableField("permission_id")
+    private Integer permissionId;
 
     @TableField("update_time")
     private Date updateTime;

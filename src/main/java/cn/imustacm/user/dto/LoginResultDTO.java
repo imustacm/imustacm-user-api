@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * Token DTO
  *
@@ -15,10 +17,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TokenDTO {
+public class LoginResultDTO {
+
     /**
      * Token key
      */
     private String accessToken;
+
+    /**
+     * 用户权限名称List
+     */
+    private List<String> permissionNameList;
 
 }
