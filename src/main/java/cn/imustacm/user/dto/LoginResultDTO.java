@@ -24,9 +24,4 @@ public class LoginResultDTO {
      */
     private String accessToken;
 
-    /**
-     * 用户权限名称List
-     */
-    private List<String> permissionNameList;
-
 }
